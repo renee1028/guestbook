@@ -8,4 +8,5 @@ class Message(models.Model):
     publication_date = models.DateTimeField("留言日期", auto_now=False, auto_now_add=True)
 
     def __str__(self):
-        return self.user + self.subject
+        return '{}:{}'.format(self.user, self.subject)
+       # return self.user +':'+ self.subject
